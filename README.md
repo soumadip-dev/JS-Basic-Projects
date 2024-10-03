@@ -16,26 +16,23 @@ A collection of basic JavaScript projects designed for learning and experimentat
 4. **[Picture in Picture](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/04-Picture-in-Picture)**  
    An implementation of the Picture-in-Picture feature using JavaScript.
 
-5. **[Bankist Banking Page](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/05-Bankist-Banking-Page)**  
-   A simulated banking interface showcasing various banking features.
-
-6. **[Countdown Timer](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/06-Countdown-Timer)**  
+5. **[Countdown Timer](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/06-Countdown-Timer)**  
    A countdown timer that tracks time for events.
 
-7. **[Quote Generator](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/07-Quote-Generator)**  
+6. **[Quote Generator](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/07-Quote-Generator)**  
    A simple app to generate random quotes.
 
-8. **[Infinity Scroll](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/08-Infinity-Scroll)**  
+7. **[Infinity Scroll](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/08-Infinity-Scroll)**  
    A project that implements infinite scrolling for loading content.
 
-9. **[Tier List](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/09-Tier-List)**  
+8. **[Tier List](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/09-Tier-List)**  
    Create and manage a tier list for your favorite items.
 
-10. **[Joke Teller](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/10-Joke-Teller)**  
-    An app that tells you a random joke on demand.
+9. **[Joke Teller](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/10-Joke-Teller)**  
+   An app that tells you a random joke on demand.
 
-11. **[Bookmark Page](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/11-Bookmark-Page)**  
+10. **[Bookmark Page](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/11-Bookmark-Page)**  
     A page to manage and organize your bookmarks.
 
-12. **[Validate Form](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/12-Validate-Form)**  
+11. **[Validate Form](https://github.com/soumadip-dev/JS-Basic-Projects/tree/main/12-Validate-Form)**  
     A project demonstrating form validation techniques.
