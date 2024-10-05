@@ -1,58 +1,70 @@
-'use strict';
-// Function to generate a random number
-function randomNumberGenerator(start, end) {
-  return Math.trunc(Math.random() * end) + start;
-}
+document.addEventListener('DOMContentLoaded', function () {
+  ////////////// DOM Elements
+  const message = document.querySelector('.message');
+  const number = document.querySelector('.number');
+  const guessInput = document.querySelector('.guess');
+  const scoreElement = document.querySelector('.score');
+  const highScoreElement = document.querySelector('.highscore');
+  const body = document.querySelector('body');
+  const btnCheck = document.querySelector('.check');
+  const btnAgain = document.querySelector('.again');
 
-// Initialize game variables
-let secretNumber = randomNumberGenerator(1, 20);
-let score = 20;
-let highScore = 0;
+  ////////////// Game initialization
+  const randomNumberGenerator = function (start, end) {
+    return Math.trunc(Math.random() * end) + start;
+  };
 
-// Function to display a message on the page
-function displayMessage(message) {
-  document.querySelector('.message').textContent = message;
-}
+  let secretNumber = randomNumberGenerator(1, 20);
+  let score = 20;
+  let highScore = 0;
 
-// Add event listener to the 'check' button
-document.querySelector('.check').addEventListener('click', function () {
-  let guess = Number(document.querySelector('.guess').value);
-  // Check for no input
-  if (!guess) {
-    displayMessage('🚫 No Number!');
-  }
-  // Check if the user wins
-  else if (guess === secretNumber) {
-    displayMessage('🎉 Correct Number');
-    document.querySelector('body').style.backgroundColor = '#60b347';
-    document.querySelector('.number').style.width = '30rem';
-    document.querySelector('.number').textContent = secretNumber;
-    if (score > highScore) {
-      highScore = score;
-      document.querySelector('.highscore').textContent = highScore;
+  ////////////// Display message function
+  const displayMessage = function (msg) {
+    message.textContent = msg;
+  };
+
+  ////////////// Check button functionality
+  btnCheck.addEventListener('click', function () {
+    const guess = Number(guessInput.value);
+
+    // No input
+    if (!guess) {
+      displayMessage('🚫 No Number!');
     }
-  }
-  // Check if the user's guess is incorrect
-  else {
-    if (score > 1) {
-      displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      displayMessage('💥 You lost the game!');
-      document.querySelector('.score').textContent = 0;
-    }
-  }
-});
+    // Correct guess
+    else if (guess === secretNumber) {
+      displayMessage('🎉 Correct Number!');
+      body.style.backgroundColor = '#60b347';
+      number.style.width = '30rem';
+      number.textContent = secretNumber;
 
-// Add event listener to the 'again' button
-document.querySelector('.again').addEventListener('click', function () {
-  document.querySelector('body').style.backgroundColor = '#222';
-  displayMessage('Start guessing...');
-  score = 20;
-  document.querySelector('.score').textContent = score;
-  secretNumber = randomNumberGenerator(1, 20);
-  document.querySelector('.number').textContent = '?';
-  document.querySelector('.number').style.width = '15rem';
-  document.querySelector('.guess').value = '';
+      if (score > highScore) {
+        highScore = score;
+        highScoreElement.textContent = highScore;
+      }
+    }
+    // Incorrect guess
+    else {
+      if (score > 1) {
+        displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
+        score--;
+        scoreElement.textContent = score;
+      } else {
+        displayMessage('💥 You lost the game!');
+        scoreElement.textContent = 0;
+      }
+    }
+  });
+
+  ////////////// Again button functionality
+  btnAgain.addEventListener('click', function () {
+    body.style.backgroundColor = '#222';
+    displayMessage('Start guessing...');
+    score = 20;
+    scoreElement.textContent = score;
+    secretNumber = randomNumberGenerator(1, 20);
+    number.textContent = '?';
+    number.style.width = '15rem';
+    guessInput.value = '';
+  });
 });
